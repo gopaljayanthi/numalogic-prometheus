@@ -57,7 +57,7 @@ spec:
           
       containers:
         - name: numalogic-redis-cluster
-          image: docker.intuit.com/docker-rmt/bitnami/redis-cluster:7.0.5-debian-11-r19
+          image: bitnami/redis-cluster:7.0.5-debian-11-r19
           imagePullPolicy: "IfNotPresent"
           securityContext:
             runAsNonRoot: true
@@ -136,7 +136,7 @@ spec:
             - name: scripts
               mountPath: /scripts
             - name: redis-data
-              mountPath: /bitnami/redis/data
+              mountPath: /data
               subPath: 
             - name: default-config
               mountPath: /opt/bitnami/redis/etc/redis-default.conf
